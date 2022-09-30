@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    height: 100%;
+}
+.message{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.message span{
+    color: white;
+    text-align: center;
+    font-size: x-large;
+}

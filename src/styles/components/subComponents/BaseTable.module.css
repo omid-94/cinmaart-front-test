@@ -1,0 +1,39 @@
+.Container{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+}
+.Container > table {
+    /* width: 50px; */
+    flex: 1;
+    border:1px solid white;
+    border-radius: 10px;
+
+    overflow: auto;
+} 
+.Container > table > thead> tr > th {
+    padding: 0.5rem;
+    border:1px solid white;
+}
+.Container > table > tbody > tr > td{
+    padding: 0.3rem;
+    font-size: 10pt;
+    text-indent: 1rem;
+    
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.Container > table > tbody > tr > td > a{
+    background-color: orangered;
+    padding: 0.2rem 1rem 0.2rem 1rem ;
+    border-radius: 10px;
+} 
+.Container > table > tbody> tr:nth-child(even) > td > a {
+    background-color: orange;
+    color: black;
+}
+.Container > table > tbody > tr:nth-child(even) {
+    background-color: #343d47;
+}

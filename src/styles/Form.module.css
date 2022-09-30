@@ -1,0 +1,71 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+}
+.Form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid lightgrey;
+    border-radius: 30px;
+    margin: 0 0 1rem;
+}
+.Form_container > h2 {
+    margin : 0.5rem 0 1rem;
+}
+.Form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 550px;
+}
+.Form > input {
+    width: 80%;
+    height: 30px;
+    margin: 0.2rem 0;
+    text-indent: 10px;
+    font-size: 12pt;
+    border-radius: 10px;
+}
+.Form > label {
+    width: 80%;
+    margin: 0.2rem 0;
+}
+.Form > textarea {
+    width: 80%;
+    margin: 0.2rem 0;
+    font-size: 12pt;
+    border-radius: 10px;
+    text-indent: 10px;
+}
+.Form > button {
+    width: 80%;
+    height: 40px;
+    margin: 1rem 0 1rem;
+    background-color: orangered;
+    color: white;
+    border-radius: 10px;
+    font-size: 13pt;
+}
+.Form > button:hover {
+    background-color: darkorange;
+}
+
+@media screen and (max-width: 700px) {
+    .Form{
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 550px) {
+    .Form{
+        width: 80vw;
+    }
+    .Form_container > h2 {
+        margin : 1rem 0 1.5rem;
+    }
+}

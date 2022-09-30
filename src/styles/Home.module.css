@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.Grid_header {
+    color: white;
+    font-size: 15pt;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin: 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.Grid_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 2rem;
+    font-size: 50px;
+  }

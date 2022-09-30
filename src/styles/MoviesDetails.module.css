@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+}
+.moviesDetail{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    padding: 1rem;
+    margin: 0 0 1rem;
+    border: 1px solid white;
+    border-radius: 30px;
+}
+.moviesDetail_Banner{
+    display: flex;
+}
+.moviesDetail_Banner img{
+    height: 400px;
+    width: 350px;
+    border-radius: 30px;
+}
+.moviesDetail_Description{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 0 1rem 0 0 ;
+}
+.moviesDetail_Description h2{
+    align-self: center;
+    margin: 1rem;
+}
+.moviesDetail_Description p{
+    margin: 1rem;
+    font-size: 13pt;
+}
