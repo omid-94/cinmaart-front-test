@@ -18,6 +18,8 @@
 }
 .moviesDetail_Banner{
     display: flex;
+    flex: 1;
+    justify-content: center;
 }
 .moviesDetail_Banner img{
     height: 400px;
@@ -26,9 +28,10 @@
 }
 .moviesDetail_Description{
     display: flex;
-    flex: 1;
     flex-direction: column;
     margin: 0 1rem 0 0 ;
+    flex: 2;
+    width: 100%;
 }
 .moviesDetail_Description h2{
     align-self: center;
@@ -37,4 +40,14 @@
 .moviesDetail_Description p{
     margin: 1rem;
     font-size: 13pt;
+}
+@media screen and (max-width: 800px) {
+    .moviesDetail_Banner img{
+        height: 300px;
+        width: 250px;
+        border-radius: 30px;
+    }
+    .moviesDetail_Description div{
+        overflow : scroll;
+    }
 }

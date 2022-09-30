@@ -34,13 +34,19 @@ const MoviesDetails = (props) => {
             />
             </div>
             <div className={styles.moviesDetail_Description}>
-              <h2>{selectedItem.title}</h2>
-              <p>{selectedItem.content}</p>
-              <BaseTable 
-                Header={tableHeader}
-                Data={selectedItem.subtitles}
-              />
-              <Pagination/>
+              <div >
+                <h2>{selectedItem.title}</h2>
+                <p>{selectedItem.content}</p>
+              </div>
+              <div>
+                <BaseTable 
+                  Header={tableHeader}
+                  Data={selectedItem.subtitles}
+                />
+              </div>
+              <div>
+                <Pagination/>
+              </div>
             </div>  
           </div>
         : <h2> 204 | Item Not Found </h2> 
