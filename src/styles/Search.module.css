@@ -12,3 +12,15 @@
     margin-top: 2rem;
     font-size: 50px;
   }
+  .head{
+    align-self: stretch;
+    justify-content: center;
+    text-align: left;
+    color: lightgray;
+    font-size: 15pt;
+    padding: 1rem;
+    padding-left: 2rem;
+    margin: 1rem;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+  }

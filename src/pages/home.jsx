@@ -7,13 +7,12 @@ import { useNavigate } from 'react-router-dom';
 export default function Home() {
   const navigate = useNavigate()
   const GoToDetails = (id) => navigate('/movies/' + id)
+  useEffect(() => {
+    document.title = 'Cinama art | Home';
+  });
   
   return (
     <div className={styles.container}>
-      {/* <Head>
-        <title>Cinamaart | Home</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head> */}
       <div className={styles.Grid_header}>
         Latest movies in the world
       </div>

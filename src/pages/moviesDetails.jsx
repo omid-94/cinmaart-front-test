@@ -1,15 +1,20 @@
-import React  from 'react'
+import React , {useEffect , useState}  from 'react'
 import { useParams } from 'react-router-dom'
 import styles from '../styles/MoviesDetails.module.css'
 import detailsData from './api/data/detailsData.json'
 import {BaseTable , Pagination} from '../components/SubComponents'
 
-const MoviesDetails = (props) => {
-    const { id } = useParams();
-    console.log("Movie Details Id",id)
-    const selectedItem =  detailsData.find((obj) => {
-      return obj.movieId == id;
-    })
+const MoviesDetails = () => {
+  const [selectedItem , SetSelectedItem] = useState({})
+  const { id } = useParams();  
+  useEffect(() => {
+      const item =  detailsData.find((obj) => {
+        return obj.movieId == id;
+      })
+      document.title = 'Cinama art | ' + selectedItem.title;
+      SetSelectedItem(item)
+    });
+
     const tableHeader = [
       {
         title : "File Name",

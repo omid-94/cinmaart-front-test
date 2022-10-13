@@ -1,7 +1,10 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styles from '../styles/Form.module.css'
 
 const SignUp = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | Sign Up';
+  });
   return (
     <div className={styles.container}>
         {/* <Head>

@@ -11,8 +11,8 @@ const Navbar = () =>
   const SearchKeyPress = (e) => 
   {
     if(e.keyCode !== 13) return;
-    alert(e.target.value)
-    navigate('/search')
+  
+    navigate('/search?keyword=' + e.target.value)
     e.target.value = ""
     setToggleMenu(false)
   }

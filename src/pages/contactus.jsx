@@ -1,7 +1,10 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styles from '../styles/Form.module.css'
 
 const ContactUs = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | Contact Us';
+  });
   return (
     <div className={styles.container}>
       {/* <Head>

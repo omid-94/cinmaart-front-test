@@ -1,10 +1,13 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styles from '../styles/Aboutus.module.css'
 import { ProfileCard } from '../components/SubComponents'
 import omidPic from '../assets/omidProfile.jpg'
 import essiPic from '../assets/essiProfile.jpg'
 
 const About = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | About Us';
+  });
   return (
     <div className={styles.container}>
       {/* <Head>

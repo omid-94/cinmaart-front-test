@@ -1,27 +1,26 @@
 import styles from '../styles/Search.module.css'
 import { Card , Pagination} from '../components/SubComponents' 
-import { useEffect, useState } from 'react'
+import { useEffect , useState} from 'react'
 import JsonData from './api/data/SearchData.json'
-import { useNavigate } from 'react-router-dom';
-export const getStaticProps = async () => {
-  return {
-    props : { 
-      data : JsonData
-    }
-  }
-}
-const Search = ({data , isOnlySearch = true}) => {
+import { useNavigate  , useSearchParams} from 'react-router-dom';
+
+const Search = ({keyWord}) => {
   const navigate = useNavigate()
   const GoToDetails = (id) => navigate('/movies/' + id)
-  
+  const [keyword , SetKeyword] = useState(null) 
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  useEffect(() => {
+    document.title = 'Cinama art | Search';
+    SetKeyword(searchParams.get("keyword"))
+  });
   return (
     <div className={styles.container}>
-      {/* { isOnlySearch &&
-      <Head>
-        <title>Cinamaart | Search</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
-      } */}
+        { keyword ?      
+          <div className={styles.head}>
+              {"You searched for : " + keyword}
+          </div> : null
+        }
         <div className={styles.Grid_container}>
         {
             JsonData.map((item , index) => (

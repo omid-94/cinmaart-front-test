@@ -1,13 +1,12 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styles from '../styles/Form.module.css'
 
 const SignIn = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | Sign In';
+  });
   return (
     <div className={styles.container}>
-      {/* <Head>
-        <title>Cinamaart | SignIn</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head> */}
         <div className={styles.Form_container}>
             <h2>SignIn</h2>
             <form className={styles.Form} 

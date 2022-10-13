@@ -1,8 +1,11 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import styles from '../styles/Movies.module.css'
 import Search from './search'
 
 const Movies = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | Movies';
+  });
   return (
     <div className={styles.container}>
       {/* <Head>

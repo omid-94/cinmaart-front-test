@@ -1,6 +1,9 @@
-import React from 'react'
+import React , {useEffect} from 'react'
 import Styles from  '../styles/404.module.css'
 const Custom404 = () => {
+  useEffect(() => {
+    document.title = 'Cinama art | 404';
+  });
   return (
     <div className={Styles.container}>
       {/* <Head>
