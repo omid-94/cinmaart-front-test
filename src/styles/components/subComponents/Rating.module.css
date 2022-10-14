@@ -1,0 +1,21 @@
+.Container{
+    display: flex;
+    flex-direction: row;
+    font-size: 7pt;
+}
+.Rate_Container{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 0.5rem;
+}
+.Like_Container{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 0.2rem;
+}

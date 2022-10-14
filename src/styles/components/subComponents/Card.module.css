@@ -34,7 +34,7 @@
     width: 195px;
 }
 .Card_Content{
-    height: 30px;
+    height: 35px;
     width : 200px;
     padding: 0.5rem;
     overflow : hidden;
@@ -47,9 +47,6 @@
 .Card_Actions{
     background-color: transparent;
     flex-direction: row;
-    margin-top: -20px;
+    margin-top: 5px;
     padding: 0;
-}
-.Card_Icon{
-    background-color: aqua;
 }

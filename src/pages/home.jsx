@@ -23,6 +23,9 @@ export default function Home() {
                     title={item.title}
                     content={item.content}
                     url={item.url}
+                    rate={item.rate}
+                    likes={item.likes}
+                    dislikes={item.dislikes}
                     onClick={() => GoToDetails(item.movieId)}
               />
             )) 
@@ -38,6 +41,9 @@ export default function Home() {
                     title={item.title}
                     content={item.content}
                     url={item.url}
+                    rate={item.rate}
+                    likes={item.likes}
+                    dislikes={item.dislikes}
                     onClick={() => GoToDetails(item.movieId)}
               />
             )) 
