@@ -3,17 +3,22 @@ import { useParams } from 'react-router-dom'
 import styles from '../styles/MoviesDetails.module.css'
 import detailsData from './api/data/detailsData.json'
 import {BaseTable , Pagination} from '../components/SubComponents'
+import Rating from '../components/SubComponents/rating'
 
 const MoviesDetails = () => {
-  const [selectedItem , SetSelectedItem] = useState({})
+  const [selectedItem , SetSelectedItem] = useState(null)
   const { id } = useParams();  
   useEffect(() => {
       const item =  detailsData.find((obj) => {
         return obj.movieId == id;
       })
-      document.title = 'Cinama art | ' + selectedItem.title;
       SetSelectedItem(item)
     });
+
+  useEffect(() => {
+      if (!selectedItem) return;
+        document.title = 'Cinama art | ' + selectedItem.title;
+    }, [selectedItem]);
 
     const tableHeader = [
       {
@@ -41,6 +46,13 @@ const MoviesDetails = () => {
             <div className={styles.moviesDetail_Description}>
               <div >
                 <h2>{selectedItem.title}</h2>
+                <div style={{'width' : '250px'}}> 
+                    <Rating rate={selectedItem.rate} 
+                            likes={selectedItem.likes} 
+                            dislikes={selectedItem.dislikes}
+                            size={'large'}
+                    /> 
+                </div>
                 <p>{selectedItem.content}</p>
               </div>
               <div>

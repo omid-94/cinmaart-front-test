@@ -6,7 +6,6 @@ const ProfileCard = (props) => {
     const ShowDetails  = (e) => {
         window.open('https://adrinsoft.ir/resume/user/' + props.UserId, '_blank');
     }
-    console.log(props)
   return (
     <div className={styles.Card_container}>
         <div className={styles.Avatar}>
