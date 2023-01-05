@@ -38,7 +38,7 @@ const Navbar = () =>
       <div className={styles.navbar_sign}>
         <input maxLength={25} type="text" placeholder='Search' onKeyDown={SearchKeyPress}/>
         <p><Link to="/signin">Sign in</Link></p>
-        <button onClick={NavigateToSignUp} type="button">Sign up</button>
+        <button className={styles.ripple} onClick={NavigateToSignUp} type="button">Sign up</button>
       </div>
       <div className={styles.navbar_menu}>
         {toggleMenu
